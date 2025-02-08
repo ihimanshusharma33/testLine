@@ -25,7 +25,7 @@ A **React-based** quiz application that allows users to attempt quizzes in full-
 
 ### 1️⃣ Clone the Repository  
 ```sh
-git clone https://github.com/your-repo/quiz-app.git
+git clone https://github.com/ihimanshusharma33/testLine
 cd quiz-app
 ```
 
@@ -56,6 +56,7 @@ The React app runs at **`http://localhost:3000`**.
 │   ├── /components
 │   │   ├── Quiz.js   # Main quiz component  
 │   │   ├── FullScreenHandler.js  # Fullscreen event handler  
+|   |   ├── QuizResult.js  # Quiz result component
 │   ├── /services
 │   │   ├── apiService.js  # API handling logic  
 │   ├── App.js  # Entry point  
@@ -68,25 +69,6 @@ The React app runs at **`http://localhost:3000`**.
 
 ## API Service (`/src/services/api.js`)  
 Handles fetching quiz data from the backend.
-
-```js
-const API_BASE_URL = 'http://localhost:3001/api';
-
-export const fetchQuizData = async (quizId) => {
-  try {
-    const response = await fetch(`${API_BASE_URL}/${quizId}`);
-    
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    const data = await response.json();
-    return data.questions;
-  } catch (error) {
-    console.error('Error fetching quiz data:', error);
-    return [];
-  }
-};
-```
 
 ---
 
@@ -125,5 +107,3 @@ Feel free to submit pull requests and improve this project!
 For queries, contact **Himanshu Sharma**. 🚀  
 
 ---
-
-Let me know if you need further modifications! 🚀
