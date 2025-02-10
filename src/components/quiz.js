@@ -9,7 +9,6 @@ const Quiz = ({
     setResponses,
     handleQuizSubmit,
 }) => {
-    // ✅ Move hooks to the top
     const [timeLeft, setTimeLeft] = useState(totalTimeLeft);
 
     useEffect(() => {
